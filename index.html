@@ -13,14 +13,28 @@
     </script>
     <style>
       body {
-        margin: 0; /* Remove margens padrão */
-        overflow: hidden; /* Impede a barra de rolagem */
-        background: url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png') no-repeat center center fixed;
-        /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho real da sua imagem */
-        /* A propriedade 'no-repeat' impede que a imagem se repita */
-        /* 'center center' alinha a imagem ao centro */
-        /* 'fixed' mantém a imagem fixa mesmo ao rolar */
-        background-size: cover; /* Cobrir todo o corpo */
+        margin: 0;
+        overflow: hidden;
+        background: url('https://img.freepik.com/vetores-gratis/fundo-hexagonal-escuro-com-cor-gradiente_79603-1410.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1699747200&semt=ais') no-repeat center center fixed;
+        background-size: cover;
+      }
+
+      .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px; /* Adicione algum preenchimento conforme necessário */
+        background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para melhor legibilidade */
+        color: white; /* Cor do texto */
+      }
+
+      .logo {
+        max-width: 100%; /* Garante que a logo não ultrapasse a largura da tela */
+        max-height: 100px; /* Defina a altura máxima desejada para a logo */
+        margin: 0 auto; /* Centraliza a logo horizontalmente */
+        display: block;
       }
 
       .webgl-content {
@@ -35,13 +49,16 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para melhor legibilidade */
-        color: white; /* Cor do texto */
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
         text-align: center;
       }
     </style>
   </head>
   <body>
+    <div class="header">
+      <img src="https://static.expressodelivery.com.br/imagens/logos/71657/Expresso-Delivery_2f24badeb334018f896ae55d84fdcf38.png" alt="Sua Logo" class="logo">
+    </div>
     <div class="webgl-content">
       <div id="unityContainer" style="width: 960px; height: 600px"></div>
     </div>
