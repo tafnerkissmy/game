@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Flappy Bird</title>
+    <title>Flappy Food</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
@@ -11,15 +11,44 @@
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/html flipharlem.json", {onProgress: UnityProgress});
     </script>
+    <style>
+      body {
+        margin: 0; /* Remove margens padrão */
+        overflow: hidden; /* Impede a barra de rolagem */
+        background: url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png') no-repeat center center fixed;
+        /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho real da sua imagem */
+        /* A propriedade 'no-repeat' impede que a imagem se repita */
+        /* 'center center' alinha a imagem ao centro */
+        /* 'fixed' mantém a imagem fixa mesmo ao rolar */
+        background-size: cover; /* Cobrir todo o corpo */
+      }
+
+      .webgl-content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para melhor legibilidade */
+        color: white; /* Cor do texto */
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <div class="webgl-content">
       <div id="unityContainer" style="width: 960px; height: 600px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">Flappy Bird</div>
-      </div>
+    </div>
+    <div class="footer">
+      <div class="webgl-logo"></div>
+      <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+      <div class="title">Desenvolvido por @taketobrasil</div>
     </div>
   </body>
 </html>
